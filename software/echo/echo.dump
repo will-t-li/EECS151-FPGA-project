@@ -1,0 +1,75 @@
+
+echo.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+10000000 <_start>:
+10000000:	10001137          	lui	x2,0x10001
+10000004:	004000ef          	jal	x1,10000008 <main>
+
+10000008 <main>:
+10000008:	fe010113          	addi	x2,x2,-32 # 10000fe0 <main+0xfd8>
+1000000c:	00812e23          	sw	x8,28(x2)
+10000010:	02010413          	addi	x8,x2,32
+10000014:	00000013          	nop
+10000018:	800007b7          	lui	x15,0x80000
+1000001c:	0007a783          	lw	x15,0(x15) # 80000000 <main+0x6ffffff8>
+10000020:	0027f793          	andi	x15,x15,2
+10000024:	fe078ae3          	beqz	x15,10000018 <main+0x10>
+10000028:	800007b7          	lui	x15,0x80000
+1000002c:	00478793          	addi	x15,x15,4 # 80000004 <main+0x6ffffffc>
+10000030:	0007a783          	lw	x15,0(x15)
+10000034:	fef407a3          	sb	x15,-17(x8)
+10000038:	00000013          	nop
+1000003c:	800007b7          	lui	x15,0x80000
+10000040:	0007a783          	lw	x15,0(x15) # 80000000 <main+0x6ffffff8>
+10000044:	0017f793          	andi	x15,x15,1
+10000048:	fe078ae3          	beqz	x15,1000003c <main+0x34>
+1000004c:	800007b7          	lui	x15,0x80000
+10000050:	00878793          	addi	x15,x15,8 # 80000008 <main+0x70000000>
+10000054:	fef44703          	lbu	x14,-17(x8)
+10000058:	00e7a023          	sw	x14,0(x15)
+1000005c:	fb9ff06f          	j	10000014 <main+0xc>
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	3a434347          	fmsub.d	f6,f6,f4,f7,rmm
+   4:	2820                	fld	f8,80(x8)
+   6:	69466953          	0x69466953
+   a:	6576                	flw	f10,92(x2)
+   c:	4720                	lw	x8,72(x14)
+   e:	4d2d4343          	fmadd.h	f6,f26,f18,f9,rmm
+  12:	7465                	lui	x8,0xffff9
+  14:	6c61                	lui	x24,0x18
+  16:	3120                	fld	f8,96(x10)
+  18:	2e30                	fld	f12,88(x12)
+  1a:	2e32                	fld	f28,264(x2)
+  1c:	2d30                	fld	f12,88(x10)
+  1e:	3032                	fld	f0,296(x2)
+  20:	3032                	fld	f0,296(x2)
+  22:	312e                	fld	f2,232(x2)
+  24:	2e32                	fld	f28,264(x2)
+  26:	2938                	fld	f14,80(x10)
+  28:	3120                	fld	f8,96(x10)
+  2a:	2e30                	fld	f12,88(x12)
+  2c:	2e32                	fld	f28,264(x2)
+  2e:	0030                	addi	x12,x2,8
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1b41                	addi	x22,x22,-16
+   2:	0000                	unimp
+   4:	7200                	flw	f8,32(x12)
+   6:	7369                	lui	x6,0xffffa
+   8:	01007663          	bgeu	x0,x16,14 <_start-0xfffffec>
+   c:	0011                	c.nop	4
+   e:	0000                	unimp
+  10:	1004                	addi	x9,x2,32
+  12:	7205                	lui	x4,0xfffe1
+  14:	3376                	fld	f6,376(x2)
+  16:	6932                	flw	f18,12(x2)
+  18:	7032                	flw	f0,44(x2)
+  1a:	0030                	addi	x12,x2,8

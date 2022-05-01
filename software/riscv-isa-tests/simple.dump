@@ -1,0 +1,36 @@
+
+simple.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text.init:
+
+10000000 <_start>:
+10000000:	0040006f          	j	10000004 <reset_vector>
+
+10000004 <reset_vector>:
+10000004:	51e05073          	csrwi	0x51e,0
+10000008:	00000193          	li	x3,0
+1000000c:	00100193          	li	x3,1
+10000010:	51e19073          	csrw	0x51e,x3
+
+10000014 <p>:
+10000014:	0000006f          	j	10000014 <p>
+10000018:	c0001073          	unimp
+	...
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1d41                	addi	x26,x26,-16
+   2:	0000                	unimp
+   4:	7200                	flw	f8,32(x12)
+   6:	7369                	lui	x6,0xffffa
+   8:	01007663          	bgeu	x0,x16,14 <_start-0xfffffec>
+   c:	00000013          	nop
+  10:	7205                	lui	x4,0xfffe1
+  12:	3376                	fld	f6,376(x2)
+  14:	6932                	flw	f18,12(x2)
+  16:	7032                	flw	f0,44(x2)
+  18:	0030                	addi	x12,x2,8
+  1a:	0108                	addi	x10,x2,128
+  1c:	0b0a                	slli	x22,x22,0x2

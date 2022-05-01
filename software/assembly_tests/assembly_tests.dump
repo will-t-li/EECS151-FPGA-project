@@ -1,0 +1,40 @@
+
+assembly_tests.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+40000000 <_start>:
+40000000:	06400513          	li	x10,100
+40000004:	0c800593          	li	x11,200
+40000008:	00b500b3          	add	x1,x10,x11
+4000000c:	00100a13          	li	x20,1
+40000010:	06400113          	li	x2,100
+40000014:	00000463          	beqz	x0,4000001c <branch1>
+40000018:	07b00113          	li	x2,123
+
+4000001c <branch1>:
+4000001c:	1f400093          	li	x1,500
+40000020:	00200a13          	li	x20,2
+40000024:	00100993          	li	x19,1
+40000028:	51e99073          	csrw	0x51e,x19
+
+4000002c <Done>:
+4000002c:	0000006f          	j	4000002c <Done>
+
+Disassembly of section .riscv.attributes:
+
+00000000 <.riscv.attributes>:
+   0:	1d41                	addi	x26,x26,-16
+   2:	0000                	unimp
+   4:	7200                	flw	f8,32(x12)
+   6:	7369                	lui	x6,0xffffa
+   8:	01007663          	bgeu	x0,x16,14 <_start-0x3fffffec>
+   c:	00000013          	nop
+  10:	7205                	lui	x4,0xfffe1
+  12:	3376                	fld	f6,376(x2)
+  14:	6932                	flw	f18,12(x2)
+  16:	7032                	flw	f0,44(x2)
+  18:	0030                	addi	x12,x2,8
+  1a:	0108                	addi	x10,x2,128
+  1c:	0b0a                	slli	x22,x22,0x2

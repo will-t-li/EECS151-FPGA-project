@@ -1,0 +1,320 @@
+[TEST 1] BIOS startup. Expect to see: \r\n151> 
+ [   PASSED ]        88230, sim. cycle       4401] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0d, expected 8'h0d, == 
+[time               175290, sim. cycle       8754] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0a, expected 8'h0a, == 
+ [   PASSED ]
+[time               262250, sim. cycle      13102] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time               349310, sim. cycle      17455] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h35, expected 8'h35, == 5 [   PASSED ]
+[time               436370, sim. cycle      21808] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time               523430, sim. cycle      26161] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h3e, expected 8'h3e, == > [   PASSED ]
+[time               610490, sim. cycle      30514] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[TEST 3] Send [sw cafeaaaa 30000004] command. Expect to write 32'hcafeaaaa to both IMem[1] and DMem[1]
+[time               697290, sim. cycle      34854] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h73
+[time               784090, sim. cycle      39194] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h77
+[time               784850, sim. cycle      39232] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h73, expected 8'h73, == s [   PASSED ]
+[time               870890, sim. cycle      43534] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time               871890, sim. cycle      43584] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h77, expected 8'h77, == w [   PASSED ]
+[time               957690, sim. cycle      47874] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h63
+[time               958930, sim. cycle      47936] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time              1044490, sim. cycle      52214] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              1045970, sim. cycle      52288] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h63, expected 8'h63, == c [   PASSED ]
+[time              1131290, sim. cycle      56554] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              1133010, sim. cycle      56640] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              1218090, sim. cycle      60894] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h65
+[time              1220050, sim. cycle      60992] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              1304890, sim. cycle      65234] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              1307090, sim. cycle      65344] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h65, expected 8'h65, == e [   PASSED ]
+[time              1391690, sim. cycle      69574] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              1394130, sim. cycle      69696] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              1478490, sim. cycle      73914] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              1481170, sim. cycle      74048] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              1565290, sim. cycle      78254] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              1568210, sim. cycle      78400] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              1652090, sim. cycle      82594] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time              1655250, sim. cycle      82752] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              1738890, sim. cycle      86934] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h33
+[time              1742290, sim. cycle      87104] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time              1825690, sim. cycle      91274] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              1829270, sim. cycle      91453] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h33, expected 8'h33, == 3 [   PASSED ]
+[time              1912490, sim. cycle      95614] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              1916310, sim. cycle      95805] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              1999290, sim. cycle      99954] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              2003350, sim. cycle     100157] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              2086090, sim. cycle     104294] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              2090390, sim. cycle     104509] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              2172890, sim. cycle     108634] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              2177430, sim. cycle     108861] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              2259690, sim. cycle     112974] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              2264470, sim. cycle     113213] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              2346490, sim. cycle     117314] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h34
+[time              2351510, sim. cycle     117565] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              2433290, sim. cycle     121654] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h0d
+[time              2438550, sim. cycle     121917] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h34, expected 8'h34, == 4 [   PASSED ]
+ [   PASSED ]      2525510, sim. cycle     126265] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0d, expected 8'h0d, == 
+[time              2612570, sim. cycle     130618] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0a, expected 8'h0a, == 
+ [   PASSED ]
+[time              2699570, sim. cycle     134968] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time              2786630, sim. cycle     139321] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h35, expected 8'h35, == 5 [   PASSED ]
+[time              2873690, sim. cycle     143674] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time              2960750, sim. cycle     148027] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h3e, expected 8'h3e, == > [   PASSED ]
+[time              3047810, sim. cycle     152380] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+Imem[1]=cafeaaaa DMem[1]=cafeaaaa
+Test Write to IMem
+PASSED!
+Test Write to DMem
+PASSED!
+[TEST 3] Send [sw cafeaaaa 30000004] command. Expect to write 32'hcafeaaaa to both IMem[1] and DMem[1]
+[time              3134610, sim. cycle     156720] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h73
+[time              3221410, sim. cycle     161060] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h77
+[time              3222170, sim. cycle     161098] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h73, expected 8'h73, == s [   PASSED ]
+[time              3308210, sim. cycle     165400] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time              3309210, sim. cycle     165450] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h77, expected 8'h77, == w [   PASSED ]
+[time              3395010, sim. cycle     169740] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h63
+[time              3396250, sim. cycle     169802] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time              3481810, sim. cycle     174080] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              3483290, sim. cycle     174154] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h63, expected 8'h63, == c [   PASSED ]
+[time              3568610, sim. cycle     178420] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              3570330, sim. cycle     178506] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              3655410, sim. cycle     182760] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h65
+[time              3657370, sim. cycle     182858] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              3742210, sim. cycle     187100] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              3744410, sim. cycle     187210] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h65, expected 8'h65, == e [   PASSED ]
+[time              3829010, sim. cycle     191440] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              3831450, sim. cycle     191562] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              3915810, sim. cycle     195780] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              3918490, sim. cycle     195914] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              4002610, sim. cycle     200120] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              4005530, sim. cycle     200266] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              4089410, sim. cycle     204460] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time              4092570, sim. cycle     204618] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              4176210, sim. cycle     208800] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h33
+[time              4179610, sim. cycle     208970] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time              4263010, sim. cycle     213140] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              4266590, sim. cycle     213319] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h33, expected 8'h33, == 3 [   PASSED ]
+[time              4349810, sim. cycle     217480] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              4353630, sim. cycle     217671] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              4436610, sim. cycle     221820] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              4440670, sim. cycle     222023] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              4523410, sim. cycle     226160] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              4527710, sim. cycle     226375] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              4610210, sim. cycle     230500] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              4614750, sim. cycle     230727] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              4697010, sim. cycle     234840] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              4701790, sim. cycle     235079] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              4783810, sim. cycle     239180] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h38
+[time              4788830, sim. cycle     239431] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              4870610, sim. cycle     243520] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h0d
+[time              4875870, sim. cycle     243783] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h38, expected 8'h38, == 8 [   PASSED ]
+ [   PASSED ]      4962830, sim. cycle     248131] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0d, expected 8'h0d, == 
+[time              5049890, sim. cycle     252484] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0a, expected 8'h0a, == 
+ [   PASSED ]
+[time              5136890, sim. cycle     256834] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time              5223950, sim. cycle     261187] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h35, expected 8'h35, == 5 [   PASSED ]
+[time              5311010, sim. cycle     265540] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time              5398070, sim. cycle     269893] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h3e, expected 8'h3e, == > [   PASSED ]
+[time              5485130, sim. cycle     274246] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+Imem[2]=cafeaaaa DMem[2]=cafeaaaa
+Test Write to IMem
+PASSED!
+Test Write to DMem
+PASSED!
+[TEST 3] Send [sw cafeaaaa 30000004] command. Expect to write 32'hcafeaaaa to both IMem[1] and DMem[1]
+[time              5571930, sim. cycle     278586] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h73
+[time              5658730, sim. cycle     282926] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h77
+[time              5659490, sim. cycle     282964] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h73, expected 8'h73, == s [   PASSED ]
+[time              5745530, sim. cycle     287266] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time              5746530, sim. cycle     287316] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h77, expected 8'h77, == w [   PASSED ]
+[time              5832330, sim. cycle     291606] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h63
+[time              5833570, sim. cycle     291668] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time              5919130, sim. cycle     295946] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              5920610, sim. cycle     296020] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h63, expected 8'h63, == c [   PASSED ]
+[time              6005930, sim. cycle     300286] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              6007650, sim. cycle     300372] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              6092730, sim. cycle     304626] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h65
+[time              6094690, sim. cycle     304724] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              6179530, sim. cycle     308966] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              6181730, sim. cycle     309076] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h65, expected 8'h65, == e [   PASSED ]
+[time              6266330, sim. cycle     313306] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              6268770, sim. cycle     313428] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              6353130, sim. cycle     317646] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              6355810, sim. cycle     317780] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              6439930, sim. cycle     321986] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time              6442850, sim. cycle     322132] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              6526730, sim. cycle     326326] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time              6529890, sim. cycle     326484] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time              6613530, sim. cycle     330666] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h33
+[time              6616930, sim. cycle     330836] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time              6700330, sim. cycle     335006] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              6703910, sim. cycle     335185] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h33, expected 8'h33, == 3 [   PASSED ]
+[time              6787130, sim. cycle     339346] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              6790950, sim. cycle     339537] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              6873930, sim. cycle     343686] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              6877990, sim. cycle     343889] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              6960730, sim. cycle     348026] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              6965030, sim. cycle     348241] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              7047530, sim. cycle     352366] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              7052070, sim. cycle     352593] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              7134330, sim. cycle     356706] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              7139110, sim. cycle     356945] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              7221130, sim. cycle     361046] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h63
+[time              7226150, sim. cycle     361297] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              7307930, sim. cycle     365386] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h0d
+[time              7313190, sim. cycle     365649] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h63, expected 8'h63, == c [   PASSED ]
+ [   PASSED ]      7400150, sim. cycle     369997] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0d, expected 8'h0d, == 
+[time              7487210, sim. cycle     374350] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0a, expected 8'h0a, == 
+ [   PASSED ]
+[time              7574170, sim. cycle     378698] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time              7661230, sim. cycle     383051] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h35, expected 8'h35, == 5 [   PASSED ]
+[time              7748290, sim. cycle     387404] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time              7835350, sim. cycle     391757] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h3e, expected 8'h3e, == > [   PASSED ]
+[time              7922410, sim. cycle     396110] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+Imem[3]=cafeaaaa DMem[3]=cafeaaaa
+Test Write to IMem
+PASSED!
+Test Write to DMem
+PASSED!
+[time              8009210, sim. cycle     400450] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h73
+[time              8096010, sim. cycle     404790] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h77
+[time              8096770, sim. cycle     404828] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h73, expected 8'h73, == s [   PASSED ]
+[time              8182810, sim. cycle     409130] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time              8183810, sim. cycle     409180] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h77, expected 8'h77, == w [   PASSED ]
+[time              8269610, sim. cycle     413470] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              8270850, sim. cycle     413532] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time              8356410, sim. cycle     417810] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              8357890, sim. cycle     417884] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              8443210, sim. cycle     422150] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              8444930, sim. cycle     422236] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              8530010, sim. cycle     426490] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              8531970, sim. cycle     426588] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              8616810, sim. cycle     430830] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              8619010, sim. cycle     430940] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              8703610, sim. cycle     435170] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              8706050, sim. cycle     435292] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              8790410, sim. cycle     439510] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              8793090, sim. cycle     439644] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              8877210, sim. cycle     443850] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time              8880130, sim. cycle     443996] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              8964010, sim. cycle     448190] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time              8967170, sim. cycle     448348] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time              9050810, sim. cycle     452530] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h33
+[time              9054210, sim. cycle     452700] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time              9137610, sim. cycle     456870] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              9141190, sim. cycle     457049] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h33, expected 8'h33, == 3 [   PASSED ]
+[time              9224410, sim. cycle     461210] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              9228230, sim. cycle     461401] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              9311210, sim. cycle     465550] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              9315270, sim. cycle     465753] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              9398010, sim. cycle     469890] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              9402310, sim. cycle     470105] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              9484810, sim. cycle     474230] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              9489350, sim. cycle     474457] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              9571610, sim. cycle     478570] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h31
+[time              9576390, sim. cycle     478809] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time              9658410, sim. cycle     482910] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time              9663430, sim. cycle     483161] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time              9745210, sim. cycle     487250] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h0d
+[time              9750470, sim. cycle     487513] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+ [   PASSED ]      9837430, sim. cycle     491861] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0d, expected 8'h0d, == 
+[time              9924490, sim. cycle     496214] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0a, expected 8'h0a, == 
+ [   PASSED ]
+[time             10011490, sim. cycle     500564] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time             10098550, sim. cycle     504917] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h35, expected 8'h35, == 5 [   PASSED ]
+[time             10185610, sim. cycle     509270] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time             10272670, sim. cycle     513623] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h3e, expected 8'h3e, == > [   PASSED ]
+[time             10359730, sim. cycle     517976] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+Imem[1]=cafeaaaa Imem[2]= cafeaaaa Imem[3]= cafeaaaa Imem[4]= ffffffff Imem[5]= 00000000 DMem[1]=cafeaaaa
+Imem[0]=00800193
+Test Write to IMem
+PASSED!
+Test Write to DMem
+PASSED!
+[time             10446530, sim. cycle     522316] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h73
+[time             10533330, sim. cycle     526656] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h77
+[time             10534090, sim. cycle     526694] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h73, expected 8'h73, == s [   PASSED ]
+[time             10620130, sim. cycle     530996] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time             10621130, sim. cycle     531046] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h77, expected 8'h77, == w [   PASSED ]
+[time             10706930, sim. cycle     535336] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time             10708170, sim. cycle     535398] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time             10793730, sim. cycle     539676] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time             10795210, sim. cycle     539750] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time             10880530, sim. cycle     544016] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time             10882250, sim. cycle     544102] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time             10967330, sim. cycle     548356] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time             10969290, sim. cycle     548454] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time             11054130, sim. cycle     552696] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time             11056330, sim. cycle     552806] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time             11140930, sim. cycle     557036] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time             11143370, sim. cycle     557158] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time             11227730, sim. cycle     561376] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time             11230410, sim. cycle     561510] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time             11314530, sim. cycle     565716] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h66
+[time             11317450, sim. cycle     565862] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time             11401330, sim. cycle     570056] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time             11404490, sim. cycle     570214] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h66, expected 8'h66, == f [   PASSED ]
+[time             11488130, sim. cycle     574396] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h33
+[time             11491530, sim. cycle     574566] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time             11574930, sim. cycle     578736] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             11578510, sim. cycle     578915] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h33, expected 8'h33, == 3 [   PASSED ]
+[time             11661730, sim. cycle     583076] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             11665550, sim. cycle     583267] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             11748530, sim. cycle     587416] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             11752590, sim. cycle     587619] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             11835330, sim. cycle     591756] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             11839630, sim. cycle     591971] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             11922130, sim. cycle     596096] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             11926670, sim. cycle     596323] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             12008930, sim. cycle     600436] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h31
+[time             12013710, sim. cycle     600675] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             12095730, sim. cycle     604776] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h34
+[time             12100750, sim. cycle     605027] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time             12182530, sim. cycle     609116] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h0d
+[time             12187790, sim. cycle     609379] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h34, expected 8'h34, == 4 [   PASSED ]
+ [   PASSED ]     12274750, sim. cycle     613727] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0d, expected 8'h0d, == 
+[time             12361810, sim. cycle     618080] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0a, expected 8'h0a, == 
+ [   PASSED ]
+[time             12448810, sim. cycle     622430] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time             12535870, sim. cycle     626783] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h35, expected 8'h35, == 5 [   PASSED ]
+[time             12622930, sim. cycle     631136] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time             12709990, sim. cycle     635489] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h3e, expected 8'h3e, == > [   PASSED ]
+[time             12797050, sim. cycle     639842] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+Imem[1]=cafeaaaa Imem[2]= cafeaaaa Imem[3]= cafeaaaa Imem[4]= ffffffff Imem[5]= ffffffff DMem[1]=cafeaaaa
+Imem[0]=00800193
+Test Write to IMem
+PASSED!
+Test Write to DMem
+PASSED!
+[TEST 5] Send [jal 10000000] command. Expect to see: jal 10000000
+[time             12883850, sim. cycle     644182] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h6a
+[time             12970650, sim. cycle     648522] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h61
+[time             12971410, sim. cycle     648560] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h6a, expected 8'h6a, == j [   PASSED ]
+[time             13057450, sim. cycle     652862] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h6c
+[time             13058450, sim. cycle     652912] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h61, expected 8'h61, == a [   PASSED ]
+[time             13144250, sim. cycle     657202] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h20
+[time             13145490, sim. cycle     657264] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h6c, expected 8'h6c, == l [   PASSED ]
+[time             13231050, sim. cycle     661542] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h31
+[time             13232530, sim. cycle     661616] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h20, expected 8'h20, ==   [   PASSED ]
+[time             13317850, sim. cycle     665882] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             13319590, sim. cycle     665969] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h31, expected 8'h31, == 1 [   PASSED ]
+[time             13404650, sim. cycle     670222] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             13406630, sim. cycle     670321] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             13491450, sim. cycle     674562] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             13493670, sim. cycle     674673] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             13578250, sim. cycle     678902] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             13580710, sim. cycle     679025] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             13665050, sim. cycle     683242] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             13667750, sim. cycle     683377] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             13751850, sim. cycle     687582] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             13754790, sim. cycle     687729] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             13838650, sim. cycle     691922] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h30
+[time             13841830, sim. cycle     692081] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+[time             13925450, sim. cycle     696262] [Host (tb) --> FPGA_SERIAL_RX] Sent char 8'h0d
+[time             13928870, sim. cycle     696433] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h30, expected 8'h30, == 0 [   PASSED ]
+ [   PASSED ]     14015830, sim. cycle     700781] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0d, expected 8'h0d, == 
+[time             14102890, sim. cycle     705134] [Host (tb) <-- FPGA_SERIAL_TX] Got char 8'h0a, expected 8'h0a, == 
+ [   PASSED ]
+Test RF: RF[3]=00000008
+PASSED!
+Imem[1]=cafeaaaa Imem[2]= cafeaaaa Imem[3]= cafeaaaa Imem[4]= ffffffff
+Imem[0]=00800193
+BIOS testbench done! Num failed tests:          0
+rm -f *.mif
+eda-7 [1009] ~/sp22_fpga_team05/hardware # 

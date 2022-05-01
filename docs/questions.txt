@@ -1,0 +1,107 @@
+Team 5
+	
+Changes to make to diagram:
+- Add Instruction Counter, Cycle Counter, UART modules under BIOS and DMEM
+Add a MemSel controlling a mux that takes aforementioned modules as inputs
+Take the output of the mux and pass it into LX
+Pass that into the WB mux
+
+
+ 	 	 		
+How many stages is the datapath you’ve drawn? (i.e. How many cycles does it take to execute 1 instruction?)
+3 stages.
+ 						
+How do you handle ALU → ALU hazards? 
+addi x1, x2, 100 
+addi x2, x1, 100
+We have forwarding for ALU → ALU and control signals to switch between RS1 and RS2 with FWD_A and FWD_B.
+ 						
+How do you handle ALU → MEM hazards? 
+addi x1, x2, 100
+sw x1, 0(x3)
+We have a 2-input multiplexor that switches between the ALU value of the current stage vs. the next stage.
+ 						
+How do you handle MEM → ALU hazards? 
+lw x1, 0(x3)
+addi x1, x1, 100
+We have forwarding for ALU → ALU and control signals to switch between RS1 and RS2 with FWD_A and FWD_B.
+ 						
+How do you handle MEM → MEM hazards? 
+lw x1, 0(x2)
+sw x1, 4(x2)
+
+also consider:
+lw x1, 0(x2) 
+sw x3, 0(x1)
+Needs forward from MEM to ALU result
+In case 2, we replace the value of the ALU result with the output from MEM.
+In case 1, we replace the value of rs2/data B with the output from MEM.
+
+
+Do you need special handling for 2 cycle apart hazards? 
+addi x1, x2, 100
+nop
+addi x1, x1, 100
+No.
+
+
+How do you handle branch control hazards? (What is the mispredict latency, what prediction scheme are you using, are you just injecting NOPs until the branch is resolved, what about data hazards in the branch?)
+We’ll use a 2-bit saturating predictor. If we predict a branch is not taken, we begin executing at the offset, otherwise we execute PC+4. In the case of a mispredict, we kill the currently executing instruction and execute the correct one. This has a one-instruction latency.
+
+
+How do you handle jump control hazards? Consider jal and jalr separately. What optimizations can be made to special-case handle jal?
+
+If the first case is jal, we begin executing at the destination by 
+If the first stage is a jal or 
+A special case jal (with x0) will just kill the following instruction.
+No stalling here, forward from imm_gen [TODO]
+What is the most likely critical path in your design?
+It is likely the EX stage since there is a synchronous memory access (with registers) in addition to ALU computation time.
+
+
+Where do the UART modules, instruction, and cycle counters go? How are you going to drive uart_tx_data_in_valid and uart_rx_data_out_ready (give logic expressions)?
+
+The UART modules, instruction, and cycle counters will be on the boundary of the EX->WB stage.
+
+uart_tx_data_in_valid = INST == STORE && addr == UART_ADDRESS
+uart_rx_data_out_ready = INST == LOAD && addr == UART_ADDRESS
+
+
+What is the role of the CSR register? Where does it go?
+
+Stores information about instructions received from the machine or OS. For this project, it goes to tohost = 0x51E
+Check failing tests
+
+
+When do we read from BIOS for instructions? When do we read from IMem for instructions? How do we switch from BIOS address space to IMem address space? In which case can we write to IMem, and why do we need to write to IMem? How do we know if a memory instruction is intended for DMem or any IO device? 
+
+We read when PC[30] is high, this is when we are trying to start up our FPGA and get a program. We read from the IMEM in all other cases, unless we must stall. Then we can inject a NOP.
+
+We write to IMEM when loading in a program, and we must write to it so that the correct instructions will be executed.
+
+We can parse the PC to determine if an instruction is intended for DMEM.
+
+
+
+ 						
+Control Signals:
+INST (3 copies, one for each stage)
+BrEq, BrLT
+
+PCSel
+ImmSel
+RegRW
+Fwd_A, Fwd_B
+BrUn,
+ASel, BSel
+ALUSel
+Fwd_M_addr
+Fwd_M_data	
+CSR_WE
+LXSel
+Stall
+D Wr_En
+WBSel	 				
+
+		
+

@@ -1,0 +1,37 @@
+[passed] -                         addi.mif in        232 simulation cycles
+[passed] -                          add.mif in        482 simulation cycles
+[passed] -                         andi.mif in        188 simulation cycles
+[passed] -                          and.mif in        502 simulation cycles
+[failed] -                        auipc.mif. Failed test:          4
+[failed] -                          beq.mif. Failed test:          6
+[failed] -                          bge.mif. Failed test:          8
+[failed] -                         bgeu.mif. Failed test:         10
+[failed] -                          blt.mif. Failed test:          4
+[failed] -                         bltu.mif. Failed test:          4
+[failed] -                          bne.mif. Failed test:          4
+[failed] -                          jal.mif. Failed test:          4
+[failed] -                           lb.mif. Failed test:          4
+[failed] -                          lbu.mif. Failed test:          4
+[failed] -                           lh.mif. Failed test:          4
+[failed] -                          lhu.mif. Failed test:          4
+[passed] -                          lui.mif in         37 simulation cycles
+[failed] -                           lw.mif. Failed test:          4
+[passed] -                          ori.mif in        195 simulation cycles
+[passed] -                           or.mif in        505 simulation cycles
+[failed] -                           sb.mif. Failed test:          4
+[failed] -                           sh.mif. Failed test:          4
+[passed] -                       simple.mif in         10 simulation cycles
+[passed] -                         slli.mif in        231 simulation cycles
+[passed] -                          sll.mif in        510 simulation cycles
+[passed] -                         slti.mif in        227 simulation cycles
+[passed] -                        sltiu.mif in        227 simulation cycles
+[passed] -                          slt.mif in        476 simulation cycles
+[passed] -                         sltu.mif in        476 simulation cycles
+[passed] -                         srai.mif in        246 simulation cycles
+[passed] -                          sra.mif in        529 simulation cycles
+[passed] -                         srli.mif in        240 simulation cycles
+[passed] -                          srl.mif in        523 simulation cycles
+[passed] -                          sub.mif in        474 simulation cycles
+[failed] -                           sw.mif. Failed test:          4
+[passed] -                         xori.mif in        197 simulation cycles
+[passed] -                          xor.mif in        504 simulation cycles
